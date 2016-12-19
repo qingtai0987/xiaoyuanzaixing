@@ -74,6 +74,18 @@ public class TieziFragment extends Fragment implements View.OnClickListener {
     }
     private void switchFragment(View v){
         currentIndex = (int)v.getTag();
+        switch (currentIndex){
+            case 0:
+                initTextColor();
+                mQiuzhu.setTextColor(Color.WHITE);
+                mQiuzhu.setBackgroundColor(Color.CYAN);
+                break;
+            case 1:
+                initTextColor();
+                mFenxiang.setTextColor(Color.WHITE);
+                mFenxiang.setBackgroundColor(Color.CYAN);
+                break;
+        }
 
         FragmentTransaction ft = fragmentManager.beginTransaction();
         if(fragment != null){
@@ -94,5 +106,12 @@ public class TieziFragment extends Fragment implements View.OnClickListener {
         ft.commit();
 
     }
+    private void initTextColor(){
+        mFenxiang.setBackgroundColor(Color.WHITE);
+        mQiuzhu.setBackgroundColor(Color.WHITE);
+        mQiuzhu.setTextColor(Color.CYAN);
+        mFenxiang.setTextColor(Color.CYAN);
+    }
+
 
 }
