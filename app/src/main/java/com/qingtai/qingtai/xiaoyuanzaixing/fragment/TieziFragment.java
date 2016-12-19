@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,12 +27,13 @@ import java.util.List;
 public class TieziFragment extends Fragment implements View.OnClickListener {
 
     private List<Fragment> mFragmentList = new ArrayList<Fragment>();
-    private FragmentAdapter mFragmentAdapter;
-    public static ViewPager mViewPager;
     private View view;
     private TextView mQiuzhu,mFenxiang;
+    private Fragment fragment;
 
-    private Fragment mQiuzhuFragment,mFenxiangFragment;
+    private FragmentManager fragmentManager;
+
+    private int currentIndex = 0;
 
     public TieziFragment() {
         // Required empty public constructor
@@ -46,6 +48,7 @@ public class TieziFragment extends Fragment implements View.OnClickListener {
         view = inflater.inflate(R.layout.fragment_tiezi, container, false);
         initView();
         init();
+        mFenxiang.performClick();
         return view;
     }
     private void initView(){
@@ -53,60 +56,42 @@ public class TieziFragment extends Fragment implements View.OnClickListener {
         mQiuzhu = (TextView) view.findViewById(R.id.frg_qiuzhu);
         mFenxiang.setOnClickListener(this);
         mQiuzhu.setOnClickListener(this);
-
-//        mViewPager = (ViewPager)view.findViewById(R.id.frg_viewpager);
-
+        mQiuzhu.setTag(0);
+        mFenxiang.setTag(1);
+        fragmentManager = getActivity().getSupportFragmentManager();
 
     }
     private void init(){
         mFragmentList.add(new QiuzhuFragment());
         mFragmentList.add(new FenxiangFragment());
-//        mFragmentAdapter = new FragmentAdapter(getActivity().getSupportFragmentManager(),mFragmentList);
-//        mViewPager.setAdapter(mFragmentAdapter);
-//        mViewPager.setCurrentItem(1);
-//        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//            @Override
-//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//
-//            }
-//
-//            @Override
-//            public void onPageSelected(int position) {
-//                initColor();
-//                switch (position){
-//                    case 0:
-//                        mQiuzhu.setTextColor(Color.BLUE);
-//                        break;
-//                    case 1:
-//                        mFenxiang.setTextColor(Color.BLUE);
-//                        break;
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int state) {
-//
-//            }
-//        });
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.frg_share:
-                FragmentManager fm = getActivity().getSupportFragmentManager();
-                Fragment fragment = fm.findFragmentById(R.id.frg_framentLayout);
-                if(fragment == null){
-                    fragment = new FenxiangFragment();
-                    fm.beginTransaction().add(R.id.frg_framentLayout,fragment).commit();
-                }
-
-        }
+        switchFragment(view);
 
     }
-//    private void initColor(){
-//        mQiuzhu.setTextColor(Color.RED);
-//        mFenxiang.setTextColor(Color.RED);
-//    }
+    private void switchFragment(View v){
+        currentIndex = (int)v.getTag();
+
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        if(fragment != null){
+            ft.hide(fragment);
+        }
+        Fragment nowFragment = fragmentManager.findFragmentByTag(mFragmentList.get(currentIndex).getClass().getName());
+        if(nowFragment == null){
+            nowFragment = mFragmentList.get(currentIndex);
+        }
+        fragment = nowFragment ;
+        if(!nowFragment.isAdded()){
+            ft.add(R.id.frg_framentLayout,nowFragment,nowFragment.getClass().getName());
+
+        }
+        else {
+            ft.show(nowFragment);
+        }
+        ft.commit();
+
+    }
+
 }
