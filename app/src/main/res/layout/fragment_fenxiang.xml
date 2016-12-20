@@ -5,9 +5,6 @@
     tools:context="com.qingtai.qingtai.xiaoyuanzaixing.fragment.FenxiangFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="分享" />
+
 
 </FrameLayout>
