@@ -7,4 +7,11 @@
     <!-- TODO: Update blank fragment layout -->
 
 
+    <Button
+        android:layout_gravity="center"
+        android:text="进入分享页面"
+        android:id="@+id/btn_test_goto_share_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </FrameLayout>

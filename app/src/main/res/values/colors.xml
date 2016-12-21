@@ -3,6 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="mainTextBG">#00FFFF</color>
-    <color name="color_black">#877a7a</color>
+
+    <!--主题淡绿色-->
+    <color name="theme_light_green">#00A500</color>
+    <color name="bottom_tab_color">#EFEFEF</color>
+    <color name="color_black">#000000</color>
 </resources>
