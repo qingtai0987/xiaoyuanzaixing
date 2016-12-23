@@ -5,7 +5,8 @@
     <color name="colorAccent">#FF4081</color>
 
     <!--主题淡绿色-->
-    <color name="theme_light_green">#00A500</color>
+    <color name="theme_light_green">#00B000</color>
+    <color name="toolbar_color">#E0E0E0</color>
     <color name="bottom_tab_color">#EFEFEF</color>
     <color name="color_black">#000000</color>
 </resources>

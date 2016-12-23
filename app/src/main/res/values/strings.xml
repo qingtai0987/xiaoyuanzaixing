@@ -5,4 +5,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tiezi_type0">求助帖</string>
     <string name="tiezi_type1">分享帖</string>
+    <string name="title_activity_test">Test</string>
 </resources>

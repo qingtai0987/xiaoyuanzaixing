@@ -15,9 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SharePageActivity" />
+        <activity android:name=".SharePageActivity"/>
         <activity android:name=".WriteReplyActivity" />
-        <activity android:name=".WriteCommentActivity"></activity>
+        <activity android:name=".WriteCommentActivity" />
     </application>
 
 </manifest>
