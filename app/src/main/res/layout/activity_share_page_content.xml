@@ -15,7 +15,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="@dimen/page_margin_left"
+            android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+            android:paddingRight="@dimen/page_margin_edge_horizontaol"
+            android:paddingTop="@dimen/page_margin_edge_vertical"
+            android:paddingBottom="@dimen/page_margin_edge_vertical"
             android:layout_marginTop="5dp"
             android:textSize="25sp"
             android:text="XXXXXXXXXXXXXX(标题)"/>
@@ -25,15 +28,21 @@
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/page_margin_left"
+            android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+            android:paddingRight="@dimen/page_margin_edge_horizontaol"
+            android:paddingTop="@dimen/page_margin_edge_vertical"
+            android:paddingBottom="@dimen/page_margin_edge_vertical"
             android:layout_below="@id/tv_share_page_title"/>
 
         <TextView
-            android:id="@+id/tv_share_page_use_id"
+            android:id="@+id/tv_share_page_user_name"
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/page_margin_left"
+            android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+            android:paddingRight="@dimen/page_margin_edge_horizontaol"
+            android:paddingTop="@dimen/page_margin_edge_vertical"
+            android:paddingBottom="@dimen/page_margin_edge_vertical"
             android:layout_marginBottom="8dp"
             android:layout_below="@id/listview_share_page_tag"
             android:drawableLeft="@mipmap/user_head_portrait_defualt"
@@ -50,6 +59,10 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:text="xxxx.xx.xx(时间)"
+            android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+            android:paddingRight="@dimen/page_margin_edge_horizontaol"
+            android:paddingTop="@dimen/page_margin_edge_vertical"
+            android:paddingBottom="@dimen/page_margin_edge_vertical"
             android:textSize="16sp"/>
 
     </RelativeLayout>
@@ -59,21 +72,32 @@
     <TextView
         android:id="@+id/tv_share_page_content"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+        android:paddingRight="@dimen/page_margin_edge_horizontaol"
+        android:paddingTop="@dimen/page_margin_edge_vertical"
+        android:paddingBottom="@dimen/page_margin_edge_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/content_text_size"
         android:text="帖子具体内容"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/page_reply_text_height"
         android:gravity="left|center_vertical"
-        android:paddingLeft="@dimen/page_margin_left"
+        android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+        android:paddingRight="@dimen/page_margin_edge_horizontaol"
+        android:paddingTop="@dimen/page_margin_edge_vertical"
+        android:paddingBottom="@dimen/page_margin_edge_vertical"
         android:textSize="20sp"
         android:background="@color/theme_light_green"
         android:text="回复"/>
-    
-    <ListView
+
+    <com.qingtai.qingtai.xiaoyuanzaixing.widget.ListViewInScrollView
         android:id="@+id/listview_share_page_relpy_content"
+        android:divider="@null"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
 
 </LinearLayout>

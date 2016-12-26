@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
-        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_color"
+        android:layout_gravity="top"
         android:id="@+id/toolbar_sharepage"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/bottom_tab_color">
+        android:layout_height="?attr/actionBarSize">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -16,9 +16,8 @@
 
             <TextView
                 android:id="@+id/tv_main_toolbar_return"
-                android:padding="15dp"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:textSize="@dimen/page_toolbar_return_size"
@@ -38,18 +37,20 @@
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
-        android:layout_below="@id/toolbar_sharepage"
         android:id="@+id/scrollview_share_page"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <include layout="@layout/activity_share_page_content"/>
 
     </ScrollView>
 
+
+
     <LinearLayout
         android:background="@color/bottom_tab_color"
-        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
         android:layout_gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_tab_height"
@@ -66,7 +67,7 @@
             android:drawableTop="@drawable/bg_page_bottom_collect"/>
 
         <TextView
-            android:id="@+id/tv_page_bottom_reply"
+            android:id="@+id/tv_share_page_bottom_reply"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -78,4 +79,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
