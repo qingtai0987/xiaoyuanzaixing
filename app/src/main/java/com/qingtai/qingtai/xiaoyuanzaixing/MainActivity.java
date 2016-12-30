@@ -1,19 +1,17 @@
 package com.qingtai.qingtai.xiaoyuanzaixing;
 
-import android.graphics.Typeface;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.qingtai.qingtai.xiaoyuanzaixing.fragment.TieziFragment;
 import com.qingtai.qingtai.xiaoyuanzaixing.fragment.FaxianFragment;
 import com.qingtai.qingtai.xiaoyuanzaixing.fragment.PersonFragment;
-import com.qingtai.qingtai.xiaoyuanzaixing.fragment.TieziFragment;
 
 import java.util.ArrayList;
 
@@ -71,8 +69,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     //把fragment都进行初始化，并添加到集合中
     private void initFragment(){
         fragmentArrayList = new ArrayList<Fragment>(3);
+//        fragmentArrayList.add(new TieziFragment());
         fragmentArrayList.add(new TieziFragment());
         fragmentArrayList.add(new FaxianFragment());
+
         fragmentArrayList.add(new PersonFragment());
     }
     private void switchFragment(View v){
