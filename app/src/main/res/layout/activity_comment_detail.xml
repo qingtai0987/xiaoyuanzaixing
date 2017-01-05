@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qingtai.qingtai.xiaoyuanzaixing.activity.CommentDetail">
+
+    <android.support.v7.widget.Toolbar
+        android:background="@color/toolbar_color"
+        android:layout_gravity="top"
+        android:id="@+id/toolbar_sharepage"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_comment_detail_toolbar_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/page_toolbar_return_size"
+                android:textColor="@color/theme_light_green"
+                android:text="返回"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/page_toolbar_title_size"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/black"
+                android:text="帖子详情"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_comment_detail_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/drawable_text_padding"
+            android:drawableLeft="@mipmap/user_head_portrait_defualt"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:textSize="20sp"
+            android:textColor="@color/theme_light_green"
+            android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+            android:paddingRight="@dimen/page_margin_edge_horizontaol"
+            android:paddingTop="@dimen/page_margin_edge_vertical"
+            android:paddingBottom="@dimen/page_margin_edge_vertical"
+            android:text="XXX"/>
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/page_margin_edge_horizontaol">
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/ll_comment_detail_favour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/favour"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_comment_detail_favour"
+                    android:paddingLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:id="@+id/tv_comment_detail_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/comment"/>
+
+                <TextView
+                    android:id="@+id/ll_comment_detail_comment"
+                    android:paddingLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_comment_detail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xxxx.xx.xx(时间)"
+        android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+        android:paddingRight="@dimen/page_margin_edge_horizontaol"
+        android:paddingTop="@dimen/page_margin_edge_vertical"
+        android:paddingBottom="@dimen/page_margin_edge_vertical"
+        android:layout_gravity="left"/>
+
+    <TextView
+        android:id="@+id/tv_comment_detail_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+        android:paddingRight="@dimen/page_margin_edge_horizontaol"
+        android:paddingTop="@dimen/page_margin_edge_vertical"
+        android:paddingBottom="@dimen/page_margin_edge_vertical"
+        android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+
+    <com.qingtai.qingtai.xiaoyuanzaixing.widget.ListViewInScrollView
+        android:id="@+id/lv_comment_detail_reply_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

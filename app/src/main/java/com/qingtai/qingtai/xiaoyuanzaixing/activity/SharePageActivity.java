@@ -1,21 +1,16 @@
-package com.qingtai.qingtai.xiaoyuanzaixing;
+package com.qingtai.qingtai.xiaoyuanzaixing.activity;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.qingtai.qingtai.xiaoyuanzaixing.Beans.SharePageReplyMessage;
+import com.qingtai.qingtai.xiaoyuanzaixing.Beans.SharePageReplyBean;
+import com.qingtai.qingtai.xiaoyuanzaixing.R;
 import com.qingtai.qingtai.xiaoyuanzaixing.adapter.SharePageReplyAdapter;
 import com.qingtai.qingtai.xiaoyuanzaixing.widget.ListViewInScrollView;
 
@@ -41,7 +36,7 @@ public class SharePageActivity extends AppCompatActivity implements View.OnClick
     //帖子回复列表控件
     private ListViewInScrollView lvReplyList;
     //帖子回复数据
-    private List<SharePageReplyMessage> replyListData = new LinkedList<>();;
+    private List<SharePageReplyBean> replyListData = new LinkedList<>();;
     private ScrollView scrollViewContent;
     private TextView tvToolbarReturn;
 
@@ -64,7 +59,7 @@ public class SharePageActivity extends AppCompatActivity implements View.OnClick
     private void initData() {
         //模拟数据
         for(int i = 0; i < 8; i++) {
-            SharePageReplyMessage msg = new SharePageReplyMessage();
+            SharePageReplyBean msg = new SharePageReplyBean();
             msg.setCommentCount("2");
             msg.setFavourCount("6");
             int c = i + 1;
@@ -130,7 +125,7 @@ public class SharePageActivity extends AppCompatActivity implements View.OnClick
      * 从xml布局文件中找到控件
      */
     private void findView() {
-        tvToolbarReturn = ((TextView) findViewById(R.id.tv_main_toolbar_return));
+        tvToolbarReturn = ((TextView) findViewById(R.id.tv_share_page_toolbar_return));
         mToolbar = ((Toolbar) findViewById(R.id.toolbar_sharepage));
         tvContent = ((TextView) findViewById(R.id.tv_share_page_content));
         tvUserName = ((TextView) findViewById(R.id.tv_share_page_user_name));

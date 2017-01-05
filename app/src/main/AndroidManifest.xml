@@ -15,10 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SharePageActivity" />
-        <activity android:name=".WriteReplyActivity" />
-        <activity android:name=".WriteCommentActivity" />
+        <activity android:name=".activity.SharePageActivity" />
+        <activity android:name=".activity.WriteReplyActivity" />
+        <activity android:name=".activity.WriteCommentActivity" />
         <activity android:name=".activity.MessageDetailsActivity" />
+        <activity android:name=".activity.CommentDetail"></activity>
     </application>
 
 </manifest>

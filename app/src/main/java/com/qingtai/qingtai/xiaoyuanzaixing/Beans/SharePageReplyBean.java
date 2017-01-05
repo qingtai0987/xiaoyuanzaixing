@@ -3,7 +3,7 @@ package com.qingtai.qingtai.xiaoyuanzaixing.Beans;
 /**
  * Created by Eafrey on 2016/12/23.
  */
-public class SharePageReplyMessage {
+public class SharePageReplyBean {
     //用户名
     String userName;
     //回复内容

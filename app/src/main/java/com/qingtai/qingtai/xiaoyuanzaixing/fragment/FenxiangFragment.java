@@ -8,12 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 
 import com.qingtai.qingtai.xiaoyuanzaixing.Beans.ShareMessage;
 import com.qingtai.qingtai.xiaoyuanzaixing.R;
-import com.qingtai.qingtai.xiaoyuanzaixing.SharePageActivity;
+import com.qingtai.qingtai.xiaoyuanzaixing.activity.SharePageActivity;
 import com.qingtai.qingtai.xiaoyuanzaixing.adapter.ShareContentAdapter;
 
 import java.util.ArrayList;

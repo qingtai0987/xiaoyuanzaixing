@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_comment_detail_item_reply_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/drawable_text_padding"
+            android:drawableLeft="@mipmap/user_head_portrait_defualt"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:textSize="20sp"
+            android:textColor="@color/theme_light_green"
+            android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+            android:paddingRight="@dimen/page_margin_edge_horizontaol"
+            android:paddingTop="@dimen/page_margin_edge_vertical"
+            android:paddingBottom="@dimen/page_margin_edge_vertical"
+            android:text="XXX"/>
+
+        <TextView
+            android:id="@+id/tv_comment_detail_item_reply_jubao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+            android:paddingRight="@dimen/page_margin_edge_horizontaol"
+            android:paddingTop="@dimen/page_margin_edge_vertical"
+            android:paddingBottom="@dimen/page_margin_edge_vertical"
+            android:text="举报"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_comment_detail_item_reply_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xxxx.xx.xx(时间)"
+        android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+        android:paddingRight="@dimen/page_margin_edge_horizontaol"
+        android:paddingTop="@dimen/page_margin_edge_vertical"
+        android:paddingBottom="@dimen/page_margin_edge_vertical"
+        android:layout_gravity="left"/>
+
+    <TextView
+        android:id="@+id/tv_comment_detail_item_reply_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/page_margin_edge_horizontaol"
+        android:paddingRight="@dimen/page_margin_edge_horizontaol"
+        android:paddingTop="@dimen/page_margin_edge_vertical"
+        android:paddingBottom="@dimen/page_margin_edge_vertical"
+        android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+
+
+
+
+</LinearLayout>

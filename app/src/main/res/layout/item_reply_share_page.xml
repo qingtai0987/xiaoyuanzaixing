@@ -9,7 +9,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tv_item_reply_user_name"
+            android:id="@+id/tv_share_page_item_reply_user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="@dimen/drawable_text_padding"
@@ -25,7 +25,7 @@
             android:text="XXX"/>
 
         <TextView
-            android:id="@+id/tv_item_reply_jubao"
+            android:id="@+id/tv_share_page_item_reply_jubao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -39,7 +39,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/tv_item_reply_content"
+        android:id="@+id/tv_share_page_item_reply_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/page_margin_edge_horizontaol"
@@ -49,7 +49,7 @@
         android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
 
     <TextView
-        android:id="@+id/tv_item_reply_time"
+        android:id="@+id/tv_share_page_item_reply_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="xxxx.xx.xx(时间)"
@@ -75,27 +75,52 @@
         android:layout_marginTop="@dimen/page_margin_edge_vertical"
         android:layout_marginBottom="@dimen/page_margin_edge_vertical">
 
-        <TextView
-            android:id="@+id/tv_item_reply_fovour"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
+        <LinearLayout
             android:gravity="center"
-            android:drawablePadding="3dp"
-            android:drawableLeft="@mipmap/favour"
-            android:textSize="14sp"/>
+            android:id="@+id/ll_share_page_item_reply_favour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_item_reply_comment"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/favour"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/tv_share_page_item_reply_favour"
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:gravity="center"
-            android:drawablePadding="3dp"
-            android:drawableLeft="@mipmap/comment"
-            android:textSize="14sp"/>
+            android:id="@+id/ll_share_page_item_reply_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/comment"/>
+
+            <TextView
+                android:id="@+id/tv_share_page_item_reply_comment"
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
