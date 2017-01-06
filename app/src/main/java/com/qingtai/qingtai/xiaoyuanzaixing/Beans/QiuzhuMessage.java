@@ -12,6 +12,15 @@ public class QiuzhuMessage {
     private String article_content;
     private String[] article_image_urls;
     private String reply_count;
+    private int type;
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     public String getUser_nickName() {
         return user_nickName;

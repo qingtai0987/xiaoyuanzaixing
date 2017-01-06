@@ -47,7 +47,7 @@ public class TieziFragment extends Fragment implements View.OnClickListener {
         initView();
         init();
         mFenxiang.performClick();
-
+//        mQiuzhu.performClick();
         return view;
     }
     private void initView(){

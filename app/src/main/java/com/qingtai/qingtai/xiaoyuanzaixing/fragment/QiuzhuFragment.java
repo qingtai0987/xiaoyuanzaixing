@@ -45,13 +45,33 @@ public class QiuzhuFragment extends Fragment {
     }
     public void initData(){
         datalist = new ArrayList<>();
-        for(int i = 0; i < 10; i++){
+        for(int i =0; i < 5; i ++){
             QiuzhuMessage message = new QiuzhuMessage();
             message.setArticle_title("标题");
-            message.setArticle_content("内容：会飞的噶三复合卡挂号费噶广发卡个噶是的国防部是大法官不撒谎GFUI安徽固覅发");
+            message.setArticle_content("这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容");
             message.setReply_count("50");
+            message.setType(1);
             datalist.add(message);
         }
+        for(int i =5; i < 10; i ++){
+            QiuzhuMessage message = new QiuzhuMessage();
+            message.setArticle_title("标题");
+            message.setArticle_content("这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容");
+            message.setReply_count("50");
+            message.setType(0);
+
+            datalist.add(message);
+        }
+        for(int i =10; i < 15; i ++){
+            QiuzhuMessage message = new QiuzhuMessage();
+            message.setArticle_title("标题");
+            message.setArticle_content("这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容");
+            message.setReply_count("23");
+            message.setType(0);
+
+            datalist.add(message);
+        }
+
     }
 
 
